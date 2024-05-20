@@ -21,7 +21,7 @@ const Home = () => {
   const typed = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, offset: 500, mirror: true });
+    AOS.init({ duration: 1000, offset: 450, mirror: true });
 
     const options = {
       strings: [
@@ -44,6 +44,7 @@ const Home = () => {
       <StyledMain id="home" className="container__wrapper">
         <div className="container" data-aos="fade-in">
           <img
+            className="scroll"
             src={scroll}
             style={{
               position: "absolute",
@@ -52,7 +53,11 @@ const Home = () => {
               top: "250px",
             }}
           ></img>
-          <h1 data-aos="fade-right" style={{ fontSize: "40px" }}>
+          <h1
+            className="titrebougeant"
+            data-aos="fade-right"
+            style={{ fontSize: "40px" }}
+          >
             <span>I am a </span>
             <span className="test" ref={el}></span>
           </h1>
@@ -127,32 +132,32 @@ const Home = () => {
               <div className="card__description">
                 <div className="certifications">
                   <p>Google Advanced Data Analytics</p>
-                  <small>Google</small>
+                  <small>Google </small>
                   <small>Apr 2024</small>
                 </div>
                 <div className="certifications">
                   <p>Google Cybersecurity</p>
-                  <small>Google</small>
+                  <small>Google </small>
                   <small>Mar 2024</small>
                 </div>
                 <div className="certifications">
                   <p>Google IT Automation with Python</p>
-                  <small>Google</small>
+                  <small>Google </small>
                   <small>Mar 2024</small>
                 </div>
                 <div className="certifications">
                   <p>Microsoft Cybersecurity Analyst</p>
-                  <small>Microsoft</small>
+                  <small>Microsoft </small>
                   <small>Mar 2024</small>
                 </div>
                 <div className="certifications">
                   <p>Junior Cybersecurity Analyst Career Path</p>
-                  <small>Cisco</small>
+                  <small>Cisco </small>
                   <small>Mar 2024</small>
                 </div>
                 <div className="certifications">
                   <p>The Full-Stack Javascript Bootcamp Certificate</p>
-                  <small>GOMYCODE</small>
+                  <small>GOMYCODE </small>
                   <small>Feb 2023</small>
                 </div>
               </div>
@@ -246,8 +251,9 @@ export default Home;
 const StyledMain = styled.main`
   color: rgb(52, 63, 85);
   .container {
-    padding: 15em;
     height: 15vh;
+    margin-top: 50px;
+    margin-bottom: 400px;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -264,22 +270,31 @@ const StyledMain = styled.main`
   .contact {
     display: flex;
     align-content: center;
+    justify-content: center;
+    gap: 10px;
   }
-  @media screen and (max-width: 68em) {
+
+  @media screen and (max-width: 768px) {
     .container {
-      padding-top: 10em;
-      background-image: none;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      background-image: url(bg);
+      background-repeat: no-repeat;
+      background-position: center right;
+      text-align: center;
+      align-items: center;
+    }
+    .container p {
+      line-height: 1.5em;
     }
     .contact {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1em;
+      align-content: center;
     }
-    .socials {
-      display: flex;
-      justify-content: center;
-      margin-top: 1em;
+    .titrebougeant {
+      font-size: 15px;
     }
   }
 `;
@@ -287,7 +302,6 @@ const StyledMain = styled.main`
 const Image = styled.img``;
 const Button = styled.button`
   border: none;
-  margin-right: 10px;
   button {
     cursor: pointer;
     position: relative;
@@ -472,6 +486,139 @@ const Container2 = styled.div`
   small {
     display: block;
   }
+  @media screen and (max-width: 768px) {
+    display: grid;
+    width: fit-content;
+    position: relative;
+    left: 35px;
+    gap: 60px;
+    grid-template-columns: repeat(1, 1fr);
+    img {
+      width: 100px;
+    }
+    .card {
+      position: relative;
+      width: 350px;
+      height: 400px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 0 5px #ffffff80;
+      transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card h1 {
+      font-size: 16px;
+    }
+
+    .card svg {
+      width: 48px;
+      fill: #333;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+
+    .card__content {
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .card:hover .card__content {
+      transform: rotateX(0deg);
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .card:hover svg {
+      scale: 0;
+    }
+
+    .card__description {
+      gap: 10px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.4;
+      display: grid;
+    }
+    .languages {
+      padding: 5px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+    .languages p {
+      font-size: 13px;
+      color: rgb(52, 63, 85);
+    }
+    .skills {
+      padding: 5px;
+      width: 100%;
+      height: 35px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+    .skills p {
+      font-size: 13px;
+      color: rgb(52, 63, 85);
+    }
+    .diplomas {
+      padding: 5px;
+      width: 100%;
+      height: 90px;
+      border: 1px solid rgb(52, 63, 85);
+      border-radius: 20px;
+    }
+    .diplomas p {
+      font-size: 13px;
+      color: rgb(52, 63, 85);
+    }
+    .certifications {
+      padding: 5px;
+      width: 100%;
+      height: 35px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+    .certifications p {
+      font-size: 12px;
+      color: rgb(52, 63, 85);
+    }
+    small {
+      display: block;
+    }
+    .certifications small {
+      display: inline;
+    }
+  }
 `;
 const Moi = styled.div`
   position: absolute;
@@ -481,4 +628,7 @@ const Moi = styled.div`
   }
   top: 14%;
   left: 2%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

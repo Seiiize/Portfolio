@@ -7,53 +7,21 @@ import voip from "../images/Voip.jpg";
 const Project = () => {
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       <h1>Projects</h1>
-      <div
-        className="conteneur"
-        style={{
-          height: "89vh",
-          width: "70%",
-          margin: "40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div className="conteneur">
         {" "}
-        <div
-          className="conteneur1"
-          style={{
-            height: "87vh",
-            width: "98%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "20px",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gap: "20px",
-              gridTemplateColumns: "repeat(2,1fr)",
-              width: "100%",
-              height: "80vh",
-            }}
-          >
-            <div
-              className="proj"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "30px",
-              }}
-            >
+        <div className="conteneur1">
+          <div className="cardproj">
+            <div className="proj">
               <h1>SDN Manager</h1>
-              <img src={sdn} style={{ width: "400px" }}></img>
+              <img src={sdn}></img>
               <a
                 href="https://github.com/Seiiize/SDN-Manager"
                 style={{ textDecoration: "none" }}
@@ -65,18 +33,9 @@ const Project = () => {
                 </Button>
               </a>
             </div>
-            <div
-              className="proj"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "30px",
-              }}
-            >
-              <h1>Intelligent Firewall</h1>
-              <img src={firewall} style={{ width: "400px" }}></img>
+            <div className="proj">
+              <h1 style={{ textAlign: "center" }}>Intelligent Firewall</h1>
+              <img src={firewall}></img>
               <a
                 href="https://github.com/Seiiize/Intelligent-Firewall"
                 style={{ textDecoration: "none" }}
@@ -88,18 +47,9 @@ const Project = () => {
                 </Button>
               </a>
             </div>
-            <div
-              className="proj"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "30px",
-              }}
-            >
+            <div className="proj">
               <h1>Pixel</h1>
-              <img src={pixel} style={{ width: "380px" }}></img>
+              <img src={pixel}></img>
               <a
                 href="https://github.com/Seiiize/Pixel"
                 style={{ textDecoration: "none" }}
@@ -111,18 +61,9 @@ const Project = () => {
                 </Button>
               </a>
             </div>
-            <div
-              className="proj"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "30px",
-              }}
-            >
+            <div className="proj">
               <h1>Distant VoIP</h1>
-              <img src={voip} style={{ width: "300px", height: "250px" }}></img>
+              <img className="voip" src={voip}></img>
               <a
                 href="https://github.com/Seiiize/Distant-Voip"
                 style={{ textDecoration: "none" }}
@@ -135,7 +76,7 @@ const Project = () => {
               </a>
             </div>
           </div>
-          <a style={{ textDecoration: "none" }}>
+          <a className="showmore" style={{ textDecoration: "none" }}>
             <Button>
               <button>
                 <span>Show More</span>

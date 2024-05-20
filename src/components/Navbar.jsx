@@ -41,6 +41,9 @@ const Container = styled.header`
   padding: 30px;
   box-shadow: 4px 2px 2px black;
   z-index: 999;
+  @media screen and (max-width: 768px) {
+    height: 10px;
+  }
 `;
 const Links = styled.div`
   align-items: center;
@@ -57,9 +60,16 @@ const Links = styled.div`
       color: rgb(52, 63, 85);
     }
   }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Name = styled.div`
   font-size: 20px;
   width: 30%;
   color: rgb(52, 63, 85);
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    width: 100%;
+  }
 `;

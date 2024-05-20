@@ -20,9 +20,7 @@ const Details = () => {
           <div className="exp" style={{ position: "relative" }}>
             <h1>Master Degree in Network and Telecommunications</h1>
             <h2>University of Science and Technology Houari Boumediene</h2>
-            <h2 style={{ position: "absolute", right: "10px", top: "10px" }}>
-              On Going
-            </h2>
+            <h2 className="ongoing">On Going</h2>
             <small>Electrical Engineering Faculty</small> <br />
             <small>2022 - Now</small>
             <small className="Contenu">
@@ -76,15 +74,7 @@ const Details = () => {
             <h1>Bachelor's Degree in Telecommunications</h1>
             <h2>University of Science and Technology Houari Boumediene</h2>
             <a href={diplome}>
-              <img
-                src={certif}
-                style={{
-                  position: "absolute",
-                  right: "15px",
-                  top: "15px",
-                  width: "80px",
-                }}
-              ></img>
+              <img className="diplome" src={certif}></img>
             </a>
             <small>Electrical Engineering Faculty</small> <br />
             <small>2019 - 2022</small>
@@ -120,18 +110,12 @@ const Details = () => {
             </small>
           </div>
           <div className="exp" style={{ position: "relative" }}>
-            <h1>The Full-Stack Javascript Bootcamp Certificate</h1>
+            <h1 className="dipl">
+              The Full-Stack Javascript Bootcamp Certificate
+            </h1>
             <h2>GOMYCODE</h2>
             <a href="https://diploma.gomycode.app/?id=31670094882735491">
-              <img
-                src={certif}
-                style={{
-                  position: "absolute",
-                  right: "15px",
-                  top: "15px",
-                  width: "80px",
-                }}
-              ></img>
+              <img className="diplome" src={certif}></img>
             </a>
             <small>Bab Ezzouar</small> <br />
             <small>Aug 2022 - Feb 2023</small>

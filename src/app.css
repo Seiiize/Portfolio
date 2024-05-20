@@ -7,14 +7,17 @@
   background-color: #e0e0e0;
 }
 .conteneur {
-  position: relative;
-  width: 350px;
-  height: 250px;
   background: #d6d5d5;
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   color: white;
   box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
+  height: 89vh;
+  width: 70%;
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .conteneur:hover {
   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
@@ -24,14 +27,124 @@
   }
 }
 .conteneur1 {
-  position: relative;
-  width: 350px;
-  height: 250px;
   background: #cecdcd;
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   color: white;
   transition: all 0.4s ease;
+  height: 87vh;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .conteneur1 h1 {
   color: rgb(52, 63, 85);
+}
+.cardproj {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 80vh;
+}
+.proj img {
+  width: 400px;
+}
+.proj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.voip {
+  width: 300px;
+  height: 250px;
+}
+.ongoing {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.diplome {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 80px;
+}
+.dipl {
+  width: 90%;
+}
+.cert {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 80px;
+}
+@media screen and (max-width: 768px) {
+  .scroll {
+    display: none;
+  }
+  .conteneur {
+    background: #d6d5d5;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    color: white;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    height: 162vh;
+    width: 70%;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .conteneur:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+    .conteneur1 {
+      border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    }
+  }
+  .conteneur1 {
+    background: #cecdcd;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    color: white;
+    transition: all 0.4s ease;
+    height: 160vh;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .cardproj {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    height: 80vh;
+  }
+  .proj img {
+    width: 200px;
+  }
+  .voip {
+    width: 200px;
+    height: 150px;
+  }
+  .showmore {
+    position: absolute;
+    bottom: 10%;
+  }
+  .ongoing {
+    position: absolute;
+    right: 10px;
+    top: 17%;
+  }
+  .diplome {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 50px;
+  }
 }

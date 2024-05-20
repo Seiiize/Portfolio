@@ -3,7 +3,7 @@ import styled from "styled-components";
 const professionnalexperience = () => {
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1 style={{ textAlign: "center" }}>Proffessional Experience</h1>
+      <h1 style={{ textAlign: "center" }}>Professional Experience</h1>
       <Experience
         style={{
           marginTop: "50px",
