@@ -76,7 +76,11 @@ const Project = () => {
               </a>
             </div>
           </div>
-          <a className="showmore" style={{ textDecoration: "none" }}>
+          <a
+            className="showmore"
+            style={{ textDecoration: "none" }}
+            href="https://github.com/Seiiize"
+          >
             <Button>
               <button>
                 <span>Show More</span>

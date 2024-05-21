@@ -1,7 +1,11 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import "./app.css";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    document.title = "Chafik Sofiane CHIKH";
+  });
   return (
     <div className="App" style={{ backgroundColor: "#e0e0e0" }}>
       <style>
